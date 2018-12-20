@@ -25,5 +25,6 @@ func main() {
 	bot.HandleFunc("/start", handler.HandleStart)
 	bot.HandleFunc("/next", handler.HandleFinish)
 	bot.HandleFunc("/reset", handler.HandleReset)
+	bot.HandleFunc("/bot_bodoh", handler.HandleBodoh)
 	bot.ListenAndServe()
 }
