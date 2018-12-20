@@ -12,7 +12,7 @@ func HandleReset(m *tbot.Message) {
 func HandleBodoh(m *tbot.Message) {
 	from := m.From.UserName
 	if from == admin {
-		m.Reply("Ya maap boss :'( ")
+		m.Reply("Ya maap boss :'( @" + from)
 		return
 	}
 	m.Replyf("Kurang ajar @%s, berani ngelawan polantas !?", from)
