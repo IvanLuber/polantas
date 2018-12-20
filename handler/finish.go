@@ -27,5 +27,5 @@ func HandleFinish(m *tbot.Message) {
 	}
 
 	name, memberOrder = memberOrder.pop()
-	m.Reply("next @" + name + "?")
+	m.Reply("selanjutnya @" + name + " ?")
 }

@@ -36,7 +36,7 @@ func HandleStart(m *tbot.Message) {
 	//get first member
 	name, memberOrder = memberOrder.pop()
 	t := time.Now()
-	m.Reply("Yok dimulai stand up " + t.Format("Mon Jan _2 2006"))
+	m.Reply("Yok dimulai stand up " + t.Format("Rabu _2 January 2006"))
 	m.Reply("Acak ya mulai dari tim " + team)
 	m.Reply("Dimulai dari @" + name)
 }
