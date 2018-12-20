@@ -11,8 +11,12 @@ import (
 
 func main() {
 	gotenv.Load()
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
 	token := os.Getenv("TELEGRAM_TOKEN")
-	opt := tbot.WithWebhook("", ":8080")
+	opt := tbot.WithWebhook("", ":"+port)
 	bot, err := tbot.NewServer(token, opt)
 	if err != nil {
 		log.Fatal(err)
