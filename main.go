@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"github.com/heroku/polantas/handler"
 	"github.com/subosito/gotenv"
@@ -10,8 +11,13 @@ import (
 
 func main() {
 	gotenv.Load()
+	port := os.Getenv("PORT")
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
 	token := "781127446:AAHnr_BRiwHIRfMRTJ7mP1x1A0Wa93JbzHI"
-	bot, err := tbot.NewServer(token)
+	opt := tbot.WithWebhook("", ":"+port)
+	bot, err := tbot.NewServer(token, opt)
 	if err != nil {
 		log.Fatal(err)
 	}
