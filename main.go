@@ -16,7 +16,7 @@ func main() {
 	if port == "" {
 		log.Fatal("$PORT must be set")
 	}
-	token := os.Getenv("TELEGRAM_TOKEN")
+	token := "781127446:AAHnr_BRiwHIRfMRTJ7mP1x1A0Wa93JbzHI"
 	opt := tbot.WithWebhook("", ":"+port)
 	fmt.Println("port=" + port)
 	bot, err := tbot.NewServer(token, opt)
