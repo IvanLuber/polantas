@@ -13,7 +13,7 @@ func main() {
 	gotenv.Load()
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080"
+		log.Fatal("$PORT must be set")
 	}
 	token := os.Getenv("TELEGRAM_TOKEN")
 	opt := tbot.WithWebhook("", ":"+port)
