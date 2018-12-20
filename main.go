@@ -11,7 +11,9 @@ import (
 
 func main() {
 	gotenv.Load()
-	bot, err := tbot.NewServer(os.Getenv("TELEGRAM_TOKEN"))
+	token := os.Getenv("TELEGRAM_TOKEN")
+	opt := tbot.WithWebhook("", ":8080")
+	bot, err := tbot.NewServer(token, opt)
 	if err != nil {
 		log.Fatal(err)
 	}
