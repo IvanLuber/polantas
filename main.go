@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 
@@ -17,6 +18,7 @@ func main() {
 	}
 	token := os.Getenv("TELEGRAM_TOKEN")
 	opt := tbot.WithWebhook("", ":"+port)
+	fmt.Println("port=" + port)
 	bot, err := tbot.NewServer(token, opt)
 	if err != nil {
 		log.Fatal(err)
