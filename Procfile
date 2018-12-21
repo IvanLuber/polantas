@@ -1,1 +1,1 @@
-web: polantas
+bot: go run main.go
