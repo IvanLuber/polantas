@@ -1,1 +1,1 @@
-web: polantas
+bot: polantas
