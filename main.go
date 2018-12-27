@@ -23,8 +23,11 @@ func main() {
 	}
 	bot.Handle("/healthz", "ok")
 	bot.HandleFunc("/start", handler.HandleStart)
-	bot.HandleFunc("/next", handler.HandleFinish)
+	bot.HandleFunc("/next", handler.HandleNext)
 	bot.HandleFunc("/reset", handler.HandleReset)
+	bot.HandleFunc("/help", handler.HandleHelp)
 	bot.HandleFunc("/bot_bodoh", handler.HandleBodoh)
+	bot.HandleFunc("/cuti", handler.HandleCuti)
+	bot.HandleFunc("/skip", handler.HandleSkip)
 	bot.ListenAndServe()
 }

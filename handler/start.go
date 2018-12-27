@@ -18,6 +18,7 @@ var (
 	admin       = "nurudianto"
 	teamOrder   stack
 	memberOrder stack
+	skipOrder   stack
 	name        string
 	team        string
 	isStarted   bool
@@ -45,7 +46,7 @@ func initStack() {
 	if len(memberOrder) != 0 {
 		return
 	}
-	start := rand.Intn(len(teams))
+	start := rand.Intn(len(teams) - 1)
 	for i := range teams {
 		index := (start + i) % len(teams)
 		teamOrder = teamOrder.push(teams[index])
@@ -54,8 +55,7 @@ func initStack() {
 
 func initMemberStack(team string) {
 	members := allMembers[team]
-	start := rand.Intn(len(members))
-
+	start := rand.Intn(len(members) - 1)
 	for i := range members {
 		index := (start + i) % len(members)
 		memberOrder = memberOrder.push(members[index])
