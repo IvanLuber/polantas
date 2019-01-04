@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/heroku/polantas/handler"
+	"github.com/nurudianto/polantas/handler"
 	"github.com/subosito/gotenv"
 	"github.com/yanzay/tbot"
 )
