@@ -12,10 +12,16 @@ var (
 		"BE":  []string{"IvanLuberiski", "nurudianto", "qisthi", "ShandyD", "kennabila"},
 		"APP": []string{"wahyuprihantoro", "yogieclinov", "nayanda", "rifq39", "Sumanto01", "ryanbaskara", "ngengs"},
 		"FE":  []string{"ferrwan", "fauzana_s"},
-		"QA":  []string{"luthfiswees", "ricosc27", "ulvasianturi", "yanisihombing", "Arga91", "RirinZulandra"},
+		"QA":  []string{"luthfiswees", "ricosc27", "ulvasianturi", "yanisihombing", "RirinZulandra"},
+	}
+	admin = map[string]bool{
+		"nurudianto":   true,
+		"qisthi":       true,
+		"windawinanti": true,
+		"galihmuji":    true,
+		"yockytegar":   true,
 	}
 	teams       = []string{"BE", "APP", "FE", "QA"}
-	admin       = "nurudianto"
 	teamOrder   stack
 	memberOrder stack
 	skipOrder   stack
@@ -46,20 +52,23 @@ func initStack() {
 	if len(memberOrder) != 0 {
 		return
 	}
-	start := rand.Intn(len(teams) - 1)
-	for i := range teams {
-		index := (start + i) % len(teams)
-		teamOrder = teamOrder.push(teams[index])
+	shuffledTeam := shuffle(teams)
+	for i := range shuffledTeam {
+		teamOrder = teamOrder.push(shuffledTeam[i])
 	}
 }
 
 func initMemberStack(team string) {
-	members := allMembers[team]
-	start := rand.Intn(len(members) - 1)
+	members := shuffle(allMembers[team])
 	for i := range members {
-		index := (start + i) % len(members)
-		memberOrder = memberOrder.push(members[index])
+		memberOrder = memberOrder.push(members[i])
 	}
+}
+
+func shuffle(a []string) []string {
+	rand.Seed(int64(time.Now().UnixNano()))
+	rand.Shuffle(len(a), func(i, j int) { a[i], a[j] = a[j], a[i] })
+	return a
 }
 
 //build stack

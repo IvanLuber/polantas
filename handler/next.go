@@ -5,8 +5,9 @@ import (
 )
 
 func HandleNext(m *tbot.Message) {
-	if name != m.From.UserName && m.From.UserName != admin {
-		m.Replyf("Oi sabar napa @%s, ini lagi giliran @%s", m.From.UserName, name)
+	from := m.From.UserName
+	if name != from && !admin[from] {
+		m.Replyf("Oi sabar napa @%s, ini lagi giliran @%s", from, name)
 		return
 	}
 	m.Replyf("Oke, Makasih reportnya @%s", name)
@@ -15,7 +16,7 @@ func HandleNext(m *tbot.Message) {
 
 func HandleSkip(m *tbot.Message) {
 	from := m.From.UserName
-	if name != from && admin != from {
+	if name != from && !admin[from] {
 		m.Replyf("Oi sabar napa @%s, ini lagi giliran @%s", m.From.UserName, name)
 		return
 	}
@@ -25,8 +26,9 @@ func HandleSkip(m *tbot.Message) {
 }
 
 func HandleCuti(m *tbot.Message) {
-	if name != m.From.UserName && m.From.UserName != admin {
-		m.Replyf("Oi sabar napa @%s, ini lagi giliran @%s", m.From.UserName, name)
+	from := m.From.UserName
+	if name != from && !admin[from] {
+		m.Replyf("Oi sabar napa @%s, ini lagi giliran @%s", from, name)
 		return
 	}
 	m.Reply("Bagus2, cutilah karena cuti sudah tidak bisa diuangkan.")
