@@ -11,7 +11,7 @@ func HandleReset(m *tbot.Message) {
 
 func HandleBodoh(m *tbot.Message) {
 	from := m.From.UserName
-	if from == admin {
+	if admin[from] {
 		m.Reply("Ya maap boss :'( @" + from)
 		return
 	}
