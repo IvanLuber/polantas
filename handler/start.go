@@ -15,11 +15,12 @@ var (
 		"QA":  []string{"luthfiswees", "ricosc27", "ulvasianturi", "yanisihombing", "RirinZulandra"},
 	}
 	admin = map[string]bool{
-		"nurudianto":   true,
-		"qisthi":       true,
-		"windawinanti": true,
-		"galihmuji":    true,
-		"yockytegar":   true,
+		"nurudianto":     true,
+		"qisthi":         true,
+		"windawinanti":   true,
+		"galihmuji":      true,
+		"yockytegar":     true,
+		"fauridhomahran": true,
 	}
 	teams       = []string{"BE", "APP", "FE", "QA"}
 	teamOrder   stack
