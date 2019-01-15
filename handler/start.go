@@ -9,7 +9,7 @@ import (
 
 var (
 	allMembers = map[string][]string{
-		"BE":  []string{"IvanLuberiski", "nurudianto", "qisthi", "ShandyD", "kennabila"},
+		"BE":  []string{"IvanLuberiski", "nurudianto", "qisthi", "ShandyD", "kennabila", "wendydwtb"},
 		"APP": []string{"wahyuprihantoro", "yogieclinov", "nayanda", "rifq39", "Sumanto01", "ryanbaskara", "ngengs"},
 		"FE":  []string{"ferrwan", "fauzana_s"},
 		"QA":  []string{"luthfiswees", "ricosc27", "ulvasianturi", "yanisihombing", "RirinZulandra"},
