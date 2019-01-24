@@ -22,7 +22,7 @@ var (
 		"yockytegar":     true,
 		"fauridhomahran": true,
 	}
-	teams       = []string{"BE"}
+	teams       = []string{"BE","APP","FE","QA"}
 	teamOrder   stack
 	memberOrder stack
 	skipOrder   stack
