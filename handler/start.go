@@ -9,8 +9,8 @@ import (
 
 var (
 	allMembers = map[string][]string{
-		"BE":  []string{"IvanLuberiski", "nurudianto", "qisthi", "kennabila"},
-		"APP": []string{"wahyuprihantoro", "yogieclinov", "nayanda", "rifq39", "ryanbaskara", "ngengs"},
+		"BE":  []string{"IvanLuberiski", "nurudianto", "qisthi"},
+		"APP": []string{"wahyuprihantoro", "yogieclinov", "rifq39"},
 		"FE":  []string{"ferrwan", "fauzana_s"},
 		"QA":  []string{"luthfiswees", "ricosc27", "ulvasianturi", "yanisihombing", "RirinZulandra"},
 	}
@@ -22,7 +22,7 @@ var (
 		"yockytegar":     true,
 		"fauridhomahran": true,
 	}
-	teams       = []string{"BE", "APP", "FE", "QA"}
+	teams       = []string{"BE"}
 	teamOrder   stack
 	memberOrder stack
 	skipOrder   stack
