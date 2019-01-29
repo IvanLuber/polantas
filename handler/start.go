@@ -9,17 +9,16 @@ import (
 
 var (
 	allMembers = map[string][]string{
-		"BE":  []string{"IvanLuberiski", "nurudianto", "qisthi"},
+		"BE":  []string{"IvanLuberiski", "nurudianto"},
 		"APP": []string{"wahyuprihantoro", "yogieclinov", "rifq39"},
-		"FE":  []string{"ferrwan", "fauzana_s"},
+		"FE":  []string{"fauzana_s"},
 		"QA":  []string{"luthfiswees", "ricosc27", "ulvasianturi", "yanisihombing", "RirinZulandra"},
 	}
 	admin = map[string]bool{
 		"nurudianto":     true,
-		"qisthi":         true,
+		"yogieclinov":    true,
 		"windawinanti":   true,
 		"galihmuji":      true,
-		"yockytegar":     true,
 		"fauridhomahran": true,
 	}
 	teams       = []string{"BE","APP","FE","QA"}
