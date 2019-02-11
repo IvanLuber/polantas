@@ -11,7 +11,7 @@ var (
 	allMembers = map[string][]string{
 		"BE":  []string{"IvanLuberiski", "nurudianto"},
 		"APP": []string{"wahyuprihantoro", "yogieclinov", "rifq39"},
-		"FE":  []string{"fauzana_s"},
+		"FE":  []string{"fauzana_s", "hatfimydniw"},
 		"QA":  []string{"luthfiswees", "ricosc27", "ulvasianturi", "yanisihombing", "RirinZulandra"},
 	}
 	admin = map[string]bool{
