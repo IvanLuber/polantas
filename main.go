@@ -29,5 +29,6 @@ func main() {
 	bot.HandleFunc("/bot_bodoh", handler.HandleBodoh)
 	bot.HandleFunc("/cuti", handler.HandleCuti)
 	bot.HandleFunc("/skip", handler.HandleSkip)
+	bot.HandleFunc("/call {team}", handler.HandleCall)
 	bot.ListenAndServe()
 }

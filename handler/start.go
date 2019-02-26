@@ -11,7 +11,7 @@ var (
 	allMembers = map[string][]string{
 		"BE":  []string{"IvanLuberiski", "nurudianto"},
 		"APP": []string{"wahyuprihantoro", "yogieclinov", "rifq39", "udafik"},
-		"FE":  []string{"fauzana_s", "hatfimydniw"},
+		"FE":  []string{"fauzana_s", "hatfimydniw", "ferrwan"},
 		"QA":  []string{"luthfiswees", "ricosc27", "ulvasianturi", "yanisihombing", "RirinZulandra"},
 	}
 	admin = map[string]bool{
@@ -21,7 +21,7 @@ var (
 		"galihmuji":      true,
 		"fauridhomahran": true,
 	}
-	teams       = []string{"BE","APP","FE","QA"}
+	teams       = []string{"BE", "APP", "FE", "QA"}
 	teamOrder   stack
 	memberOrder stack
 	skipOrder   stack
@@ -43,7 +43,7 @@ func HandleStart(m *tbot.Message) {
 	//get first member
 	name, memberOrder = memberOrder.pop()
 	t := time.Now()
-	m.Reply("Yok dimulai stand up " + t.Format("Rabu _2 January 2006"))
+	m.Reply("Yok dimulai stand up " + t.Format("_2 January 2006"))
 	m.Reply("Acak ya mulai dari tim " + team)
 	m.Reply("Dimulai dari @" + name)
 }
