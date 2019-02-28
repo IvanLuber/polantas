@@ -13,6 +13,8 @@ var (
 		"APP": []string{"wahyuprihantoro", "yogieclinov", "rifq39", "udafik"},
 		"FE":  []string{"fauzana_s", "hatfimydniw", "ferrwan"},
 		"QA":  []string{"luthfiswees", "ricosc27", "ulvasianturi", "yanisihombing", "RirinZulandra"},
+		"PM":  []string{"windawinanti"},
+		"APM": []string{"galihmuji"},
 	}
 	admin = map[string]bool{
 		"nurudianto":     true,
@@ -28,6 +30,7 @@ var (
 	name        string
 	team        string
 	isStarted   bool
+	startTime   time.Time
 )
 
 func HandleStart(m *tbot.Message) {
@@ -36,6 +39,7 @@ func HandleStart(m *tbot.Message) {
 		return
 	}
 	isStarted = true
+	startTime = time.Now()
 	initStack()
 	team, teamOrder = teamOrder.pop()
 	initMemberStack(team)

@@ -1,6 +1,9 @@
 package handler
 
 import (
+	"strconv"
+	"time"
+
 	"github.com/yanzay/tbot"
 )
 
@@ -43,7 +46,14 @@ func logic(m *tbot.Message) {
 			skipOrder = stack{}
 		} else {
 			isStarted = false
+			duration := time.Since(startTime).Minutes()
 			m.Reply("Oke udah semuanya nih, terima kasih..")
+			m.Reply("Durasi stand up: " + strconv.Itoa(int(duration)) + " Menit")
+			if int(duration) > 15 {
+				m.Reply("Stand up selanjutnya harus lebih fokus!")
+			} else {
+				m.Reply("Mantaab....")
+			}
 			return
 		}
 	}
