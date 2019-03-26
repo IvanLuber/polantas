@@ -9,12 +9,11 @@ import (
 
 var (
 	allMembers = map[string][]string{
-		"BE":  []string{"IvanLuberiski", "nurudianto"},
-		"APP": []string{"wahyuprihantoro", "yogieclinov", "rifq39", "udafik"},
-		"FE":  []string{"fauzana_s", "hatfimydniw", "ferrwan"},
+		"BE":  []string{"IvanLuberiski"},
+		"APP": []string{"rifq39", "udafik"},
+		"FE":  []string{"ferrwan"},
 		"QA":  []string{"luthfiswees", "ricosc27", "ulvasianturi", "yanisihombing", "RirinZulandra"},
-		"PM":  []string{"windawinanti"},
-		"APM": []string{"galihmuji"},
+		"PM":  []string{"fauridhomahran"},
 	}
 	admin = map[string]bool{
 		"nurudianto":     true,
@@ -22,6 +21,7 @@ var (
 		"windawinanti":   true,
 		"galihmuji":      true,
 		"fauridhomahran": true,
+		"IvanLuberiski":  true,
 	}
 	teams       = []string{"BE", "APP", "FE", "QA"}
 	teamOrder   stack
